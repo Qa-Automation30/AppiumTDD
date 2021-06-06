@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="6" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="100849" started-at="2021-06-05T13:52:34Z" finished-at="2021-06-05T13:54:15Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="100849" started-at="2021-06-05T13:52:34Z" finished-at="2021-06-05T13:54:15Z">
+      <class name="com.qa.tests.LoginTests">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.tests.LoginTests@2173f6d9]" name="beforeMethod" is-config="true" duration-ms="14586" started-at="2021-06-05T13:53:29Z" finished-at="2021-06-05T13:53:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[any device name]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1cc2d64c]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[emulator-5554]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="invalidUserName()[pri:1, instance:com.qa.tests.LoginTests@2173f6d9]" name="invalidUserName" duration-ms="9871" started-at="2021-06-05T13:53:44Z" finished-at="2021-06-05T13:53:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidUserName -->
+        <test-method status="PASS" signature="InvalidPassword()[pri:2, instance:com.qa.tests.LoginTests@2173f6d9]" name="InvalidPassword" duration-ms="11030" started-at="2021-06-05T13:53:54Z" finished-at="2021-06-05T13:54:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidPassword -->
+        <test-method status="PASS" signature="successFulLogin()[pri:3, instance:com.qa.tests.LoginTests@2173f6d9]" name="successFulLogin" duration-ms="9111" started-at="2021-06-05T13:54:05Z" finished-at="2021-06-05T13:54:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successFulLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tests.LoginTests@2173f6d9]" name="tearDown" is-config="true" duration-ms="791" started-at="2021-06-05T13:54:14Z" finished-at="2021-06-05T13:54:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tests.LoginTests -->
+      <class name="com.qa.tests.ProductTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.tests.ProductTest@7e2d773b]" name="setUp" is-config="true" duration-ms="16" started-at="2021-06-05T13:52:34Z" finished-at="2021-06-05T13:52:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.tests.ProductTest@7e2d773b]" name="login" is-config="true" duration-ms="24620" started-at="2021-06-05T13:52:34Z" finished-at="2021-06-05T13:52:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[any device name]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1cc2d64c]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[emulator-5554]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="validateProductOnProductPage()[pri:0, instance:com.qa.tests.ProductTest@7e2d773b]" name="validateProductOnProductPage" duration-ms="2826" started-at="2021-06-05T13:52:58Z" finished-at="2021-06-05T13:53:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnProductPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tests.ProductTest@7e2d773b]" name="tearDown" is-config="true" duration-ms="763" started-at="2021-06-05T13:53:01Z" finished-at="2021-06-05T13:53:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.qa.tests.ProductTest@7e2d773b]" name="login" is-config="true" duration-ms="22211" started-at="2021-06-05T13:53:02Z" finished-at="2021-06-05T13:53:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[any device name]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1cc2d64c]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[emulator-5554]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="validateProductOnProductsDeatislPage()[pri:0, instance:com.qa.tests.ProductTest@7e2d773b]" name="validateProductOnProductsDeatislPage" duration-ms="4286" started-at="2021-06-05T13:53:24Z" finished-at="2021-06-05T13:53:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductOnProductsDeatislPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.tests.ProductTest@7e2d773b]" name="tearDown" is-config="true" duration-ms="715" started-at="2021-06-05T13:53:29Z" finished-at="2021-06-05T13:53:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tests.ProductTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

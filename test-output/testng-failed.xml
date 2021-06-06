@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="emulator" value="false"/>
+  <parameter name="udidForSimulator" value="emulator-5554"/>
+  <parameter name="udidForDevice" value="1cc2d64c"/>
+  <parameter name="platformVersion" value="10"/>
+  <parameter name="platformName" value="Android"/>
+  <parameter name="deviceName" value="any device name"/>
+  <listeners>
+    <listener class-name="com.qa.listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.qa.tests.ProductTest">
+        <methods>
+          <include name="validateProductOnProductsDeatislPage"/>
+          <include name="setUp"/>
+          <include name="login"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.tests.ProductTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
