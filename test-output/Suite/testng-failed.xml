@@ -6,20 +6,20 @@
   <parameter name="udidForDevice" value="1cc2d64c"/>
   <parameter name="platformVersion" value="10"/>
   <parameter name="platformName" value="Android"/>
-  <parameter name="deviceName" value="any device name"/>
+  <parameter name="deviceName" value="YouCanGiveAnyDeviceNameHere"/>
   <listeners>
     <listener class-name="com.qa.listeners.TestListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.tests.ProductTest">
+      <class name="com.qa.tests.LoginTests">
         <methods>
-          <include name="validateProductOnProductsDeatislPage"/>
+          <include name="invalidUserName"/>
+          <include name="beforeMethod"/>
           <include name="setUp"/>
-          <include name="login"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.tests.ProductTest -->
+      </class> <!-- com.qa.tests.LoginTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

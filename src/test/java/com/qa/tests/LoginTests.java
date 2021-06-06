@@ -35,7 +35,7 @@ public class LoginTests extends BaseTest {
 			loginpage.enterPassword(loadFiles().getJSONObject("InvalidUser").getString("password"));
 			loginpage.pressLoginBtn();
 			String actualErrorText = loginpage.getErrorText();
-			String expectedErrorText = "Username and password do not match any user in this service.";
+			String expectedErrorText = "Username and password do not match any user in this services.";
 			Thread.sleep(3000);
 			Assert.assertEquals(actualErrorText, expectedErrorText);
 	}

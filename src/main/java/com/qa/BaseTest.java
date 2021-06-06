@@ -14,6 +14,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeSuite;
 
+import com.qa.utils.TestUtils;
+
+import bsh.util.Util;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -24,6 +27,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class BaseTest {
 	protected static AppiumDriver<AndroidElement> driver;
 	protected static Properties prop;
+	protected static String dateTime;
 	FileInputStream fis;
 	static JSONObject jsonObj;
 	public BaseTest() {
@@ -34,6 +38,11 @@ public class BaseTest {
 	public void setUp() throws Exception
 	{
 		loadFiles();
+		dateTime = TestUtils.getDateTime();
+	}
+	public String getDateTime()
+	{
+		return dateTime;
 	}
 	public static JSONObject loadFiles() throws Exception
 	{
@@ -53,6 +62,10 @@ public class BaseTest {
 				file.close();
 			}
 		}
+	}
+	public AppiumDriver<AndroidElement> getDriver()
+	{
+		return driver;
 	}
 	public AppiumDriver<AndroidElement> setAndroidDriver(
 			String platformName,

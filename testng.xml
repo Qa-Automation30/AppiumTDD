@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 <parameter name ="platformName" value ="Android"/>
-<parameter name ="deviceName" value ="any device name"/>
+<parameter name ="deviceName" value ="YouCanGiveAnyDeviceNameHere"/>
 <parameter name ="platformVersion" value ="10"/>
 <parameter name ="emulator" value ="false"/>
 <parameter name ="udidForDevice" value ="1cc2d64c"/>
@@ -12,8 +12,11 @@
 </listeners>
  <test name="Test">
     <classes>
-      <class name="com.qa.tests.ProductTest"/>
-      <class name="com.qa.tests.LoginTests"/>
+      <class name="com.qa.tests.LoginTests">
+      <methods>
+      	<include name ="invalidUserName"></include>
+      </methods>
+      </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
