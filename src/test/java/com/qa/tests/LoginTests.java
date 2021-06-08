@@ -5,7 +5,7 @@ import java.net.MalformedURLException;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -18,14 +18,15 @@ public class LoginTests extends BaseTest {
 	ProductsPage productspage;
 
 	@BeforeClass
-	@Parameters({"platformName","deviceName","platformVersion","emulator","udidForDevice","udidForSimulator"})
+	@Parameters({"platformName","deviceName","platformVersion","emulator","udidForDevice1","udidForDevice2","udidForSimulator"})
 	public void beforeMethod(String platformName,
 			String deviceName,
 			String platformVersion,
 			String emulator,
-			String udidForDevice,
+			@Optional("udidForDevice1")String udidForDevice1,
+			@Optional("udidForDevice2")String udidForDevice2,
 			String udidForSimulator) throws MalformedURLException {
-		setAndroidDriver(platformName, deviceName, platformVersion, emulator, udidForDevice, udidForSimulator);
+		setAndroidDriver(platformName, deviceName, platformVersion, emulator, udidForDevice1,udidForDevice2, udidForSimulator);
 		loginpage = new LoginPage();
 	}
 
@@ -35,7 +36,7 @@ public class LoginTests extends BaseTest {
 			loginpage.enterPassword(loadFiles().getJSONObject("InvalidUser").getString("password"));
 			loginpage.pressLoginBtn();
 			String actualErrorText = loginpage.getErrorText();
-			String expectedErrorText = "Username and password do not match any user in this services.";
+			String expectedErrorText = "Username and password do not match any user in this service.";
 			Thread.sleep(3000);
 			Assert.assertEquals(actualErrorText, expectedErrorText);
 	}
@@ -66,7 +67,7 @@ public class LoginTests extends BaseTest {
 	@AfterClass
 	public void tearDown()
 	{
-		driver.quit();
+		getDriver().quit();
 	}
 
 }

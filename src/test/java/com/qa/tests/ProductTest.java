@@ -3,6 +3,7 @@ package com.qa.tests;
 import org.json.JSONException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -18,15 +19,16 @@ public class ProductTest extends BaseTest {
 	ProductsDetailsPage detailspage;
 	
 	@BeforeMethod
-	@Parameters({"platformName","deviceName","platformVersion","emulator","udidForDevice","udidForSimulator"})
+	@Parameters({"platformName","deviceName","platformVersion","emulator","udidForDevice1","udidForDevice2","udidForSimulator"})
 	public void login(String platformName,
 			String deviceName,
 			String platformVersion,
 			String emulator,
-			String udidForDevice,
+			@Optional("udidForDevice1")String udidForDevice1,
+			@Optional("udidForDevice2")String udidForDevice2,
 			String udidForSimulator) throws JSONException, Exception
 	{
-		setAndroidDriver(platformName, deviceName, platformVersion, emulator, udidForDevice, udidForSimulator);
+		setAndroidDriver(platformName, deviceName, platformVersion, emulator, udidForDevice1,udidForDevice2, udidForSimulator);
 		login = new LoginPage();
 		productspage = login.loginIntoApplication(loadFiles().getJSONObject("ValidUser").getString("userName"),
 				loadFiles().getJSONObject("ValidUser").getString("password"));
@@ -52,6 +54,6 @@ public class ProductTest extends BaseTest {
 	@AfterMethod
 	public void tearDown()
 	{
-		driver.quit();
+		getDriver().quit();
 	}
 }
